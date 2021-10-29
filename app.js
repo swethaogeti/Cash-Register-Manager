@@ -87,7 +87,7 @@ function validation(bill, cash) {
         
         calculateChange
     } else {
-        showMessage("cash provided must be grater than bill amount")
+        showMessage("cash provided must be greater than bill amount")
         hideCashTable();
     }
 }
