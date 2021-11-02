@@ -82,12 +82,14 @@ function checkBtnHandler() {
 function validation(bill, cash) {
     if (cash > bill) {
         let rc = cash - bill;
+        returnChange.innerHTML= "cash to be returned - "+rc;
+        returnChange.style.fontWeight="bold"
         console.log(rc);
         calculateChange(rc);
         
-        calculateChange
+      
     } else {
-        showMessage("cash provided must be greater than bill amount")
+        showMessage("cash provided must be grater than bill amount")
         hideCashTable();
     }
 }
