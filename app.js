@@ -88,7 +88,16 @@ function validation(bill, cash) {
         calculateChange(rc);
         
       
-    } else {
+    } else if(cash===bill){
+        // showMessage("Thank you!!")
+        // hideCashTable(); 
+         let rc = cash - bill;
+        returnChange.innerHTML= "Thank you!! No change will be returned.";
+        returnChange.style.fontWeight="bold"
+        console.log(rc);
+        calculateChange(rc);
+    }
+    else  {
         showMessage("cash provided must be grater than bill amount")
         hideCashTable();
     }
